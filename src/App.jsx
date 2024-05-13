@@ -31,10 +31,10 @@ function App() {
     return (
         <>
             <Description />
-            <Options result={updateFeedback} message={handleReset} totalFeedback={totalFeedback} />
+            <Options onFeedbackSelect={updateFeedback} onResetFeedback={handleReset} totalFeedback={totalFeedback} />
             {totalFeedback > 0 ?
-                (<Feedback result={feedback} positiveFeedback={positiveFeedback} totalFeedback={totalFeedback} />) :
-                (<Notification message="No feedback yet" />)}
+                (<Feedback onFeedbackSelect={feedback} positiveFeedback={positiveFeedback} totalFeedback={totalFeedback} />) :
+                (<Notification onResetFeedback ="No feedback yet" />)}
         </>
     )
 

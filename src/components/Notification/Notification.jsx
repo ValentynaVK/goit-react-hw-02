@@ -1,7 +1,7 @@
-export default function Notification({ message }) {
+export default function Notification({ onResetFeedback}) {
     return (
         <>
-            <p>{message}</p>
+            <p>{onResetFeedback}</p>
         </>
     )
 }

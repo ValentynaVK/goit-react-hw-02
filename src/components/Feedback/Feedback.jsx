@@ -1,10 +1,10 @@
-export default function Feedback({ result, positiveFeedback, totalFeedback }) {
+export default function Feedback({ onFeedbackSelect, positiveFeedback, totalFeedback }) {
     return (
         <>
-            <p>Good: {result.good}</p>
-            <p>Neutral: {result.neutral}</p>
-            <p>Bad: {result.bad}</p>
-            <p>total: {totalFeedback}</p>
+            <p>Good {onFeedbackSelect.good}</p>
+            <p>Neutral {onFeedbackSelect.neutral}</p>
+            <p>Bad {onFeedbackSelect.bad}</p>
+            <p>total {totalFeedback}</p>
             <p>Positive {positiveFeedback}%</p>
 
 
