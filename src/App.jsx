@@ -1,6 +1,6 @@
 import Feedback from "./components/Feedback/Feedback"
 import Options from "./components/Options/Options"
-import { useState } from "react"
+import { useState, useEffect } from "react";
 import Notification from './components/Notification/Notification'
 import Description from "./components/Description/Description"
 
@@ -26,6 +26,9 @@ function App() {
     const handleReset = () => {
         setFeedback({ good: 0, neutral: 0, bad: 0 });
     };
+    useEffect(() => {
+        window.localStorage.setItem("saveFeedback", JSON.stringify(feedback));
+      }, [feedback]);
 
 
     return (
