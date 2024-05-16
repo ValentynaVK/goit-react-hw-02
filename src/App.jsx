@@ -27,7 +27,7 @@ function App() {
         setFeedback({ good: 0, neutral: 0, bad: 0 });
     };
     useEffect(() => {
-        window.localStorage.setItem("saveFeedback", JSON.stringify(feedback));
+        window.localStorage.setItem("feedback", JSON.stringify(feedback));
       }, [feedback]);
 
 
